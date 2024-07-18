@@ -26,7 +26,7 @@ El proyecto se divide en cuatro directorios:
     Toda la informacion acerca de Credenciales y rutas del proyecto se encuentra en el archivo kettle.properties. Es importante que usted especifique la ruta raiz del proyecto para poder utilizar PROJECT_DIR de manera correcta y que no haya ningun inconveniente a la hora de probar en la Suite de Pentaho.
 
     Aqui una demostracion de lo que explico: 
-    **Insertar video**
+https://github.com/user-attachments/assets/92bfaa82-d399-452d-ae7e-ae78f0ff849b
 
 # COMO PROBAR EL DESAFIO?
         Todas las tareas que presenta el desafio estan resueltas y se pueden verificar en el directorio /outputs, pero para que 
@@ -48,7 +48,10 @@ El proyecto se divide en cuatro directorios:
         * JOB: JOB_Carga de datos a .csv y .txt.kjb
 
 Breve demostracion de como abrir y ejecutar el JOB: 
-**Insertar video**
+
+https://github.com/user-attachments/assets/ae5ba158-ebc2-4242-b316-26843111b0c4
+
+
 
 
 

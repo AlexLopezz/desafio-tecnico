@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>JOB</name>
+  <name>JOB_Carga de Excel a Base de Datos</name>
   <description/>
   <extended_description/>
   <job_version/>
-  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
-  <created_date>2024/07/16 21:01:21.933</created_date>
+  <created_date>2024/07/18 04:51:27.482</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2024/07/16 21:01:21.933</modified_date>
+  <modified_date>2024/07/18 05:11:09.006</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -305,18 +304,30 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>96</yloc>
+      <xloc>16</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Carga de Excel Reporte</name>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1456</xloc>
+      <yloc>208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Creacion de recursos auxiliares</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:/Users/Alex/Documents/UTN/desafio-tecnico/source/Solucion/02/Transformaciones/ETL_CargaExcelReporte.ktr</filename>
+      <filename>${PROJECT_TRANSFORMATIONS}\ETL_Limpieza de Datos.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -344,57 +355,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>352</yloc>
+      <xloc>320</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validacion en Localidades</name>
+      <name>Carga de Provincias</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:/Users/Alex/Documents/UTN/desafio-tecnico/source/Solucion/02/Transformaciones/ETL_ValidacionLocalidades.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <run_configuration>Pentaho local</run_configuration>
-      <suppress_result_data>N</suppress_result_data>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>448</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>ETL_Validaciones en Fechas</name>
-      <description/>
-      <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>C:/Users/Alex/Documents/UTN/desafio-tecnico/source/Solucion/02/Transformaciones/ETL_ValidacionDeFormatoFecha.ktr</filename>
+      <filename>${PROJECT_TRANSFORMATIONS}\ETL_Provincias.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -422,30 +394,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>1</nr>
-      <xloc>448</xloc>
-      <yloc>352</yloc>
+      <xloc>640</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Success</name>
-      <description/>
-      <type>SUCCESS</type>
-      <attributes/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>848</xloc>
-      <yloc>352</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>ETL_Validacion en Provincias</name>
+      <name>Carga de Feriados</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:/Users/Alex/Documents/UTN/desafio-tecnico/source/Solucion/02/Transformaciones/ETL_ValidacionDeProvincias.ktr</filename>
+      <filename>${PROJECT_TRANSFORMATIONS}\ETL_Feriados.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -473,18 +433,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>2</nr>
-      <xloc>624</xloc>
-      <yloc>96</yloc>
+      <xloc>800</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validacion en Codigo Postal</name>
+      <name>Carga de Localidades</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:/Users/Alex/Documents/UTN/desafio-tecnico/source/Solucion/02/Transformaciones/ETL_ValidacionCodigoPostal.ktr</filename>
+      <filename>${PROJECT_TRANSFORMATIONS}\ETL_Localidades.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -512,18 +472,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>1</nr>
-      <xloc>624</xloc>
-      <yloc>224</yloc>
+      <xloc>960</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validacion en P.I</name>
+      <name>Creacion de Tablas</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:/Users/Alex/Documents/UTN/desafio-tecnico/source/Solucion/02/Transformaciones/ETL_ValidacionP.I.ktr</filename>
+      <filename>${PROJECT_TRANSFORMATIONS}\ETL_Initialize.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -550,16 +510,30 @@
       </parameters>
       <parallel>N</parallel>
       <draw>Y</draw>
-      <nr>1</nr>
-      <xloc>624</xloc>
-      <yloc>352</yloc>
+      <nr>2</nr>
+      <xloc>496</xloc>
+      <yloc>208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Eliminacion de recursos auxiliares</name>
+      <description/>
+      <type>DELETE_FILE</type>
+      <attributes/>
+      <filename>${PROJECT_DIR}\data.xls</filename>
+      <fail_if_file_not_exists>N</fail_if_file_not_exists>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1152</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>Start</from>
-      <to>ETL_Carga de Excel Reporte</to>
+      <to>Creacion de recursos auxiliares</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -567,26 +541,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>ETL_Carga de Excel Reporte</from>
-      <to>ETL_Validaciones en Fechas</to>
-      <from_nr>0</from_nr>
-      <to_nr>1</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ETL_Validaciones en Fechas</from>
-      <to>ETL_Validacion en Localidades</to>
-      <from_nr>1</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ETL_Validacion en Localidades</from>
-      <to>ETL_Validacion en Provincias</to>
+      <from>Creacion de recursos auxiliares</from>
+      <to>Creacion de Tablas</to>
       <from_nr>0</from_nr>
       <to_nr>2</to_nr>
       <enabled>Y</enabled>
@@ -594,8 +550,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_Validacion en Provincias</from>
-      <to>ETL_Validacion en Codigo Postal</to>
+      <from>Creacion de Tablas</from>
+      <to>Carga de Provincias</to>
       <from_nr>2</from_nr>
       <to_nr>1</to_nr>
       <enabled>Y</enabled>
@@ -603,18 +559,36 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_Validacion en Codigo Postal</from>
-      <to>ETL_Validacion en P.I</to>
+      <from>Carga de Provincias</from>
+      <to>Carga de Feriados</to>
       <from_nr>1</from_nr>
+      <to_nr>2</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Carga de Feriados</from>
+      <to>Carga de Localidades</to>
+      <from_nr>2</from_nr>
       <to_nr>1</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_Validacion en P.I</from>
-      <to>Success</to>
+      <from>Carga de Localidades</from>
+      <to>Eliminacion de recursos auxiliares</to>
       <from_nr>1</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Eliminacion de recursos auxiliares</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>

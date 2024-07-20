@@ -34,14 +34,10 @@ Listo! Ahora puede probar conectar la base de datos MySQL a traves de cualquier 
 # CREDENCIALES y RUTAS DEL PROYECTO:
 Toda la informacion acerca de Credenciales para conectarse a la base de datos y rutas del proyecto se encuentra en el archivo [**kettle.properties**](/kettle.properties). 
 
-Es importante que usted especifique la ruta raiz del proyecto para poder utilizar **PROJECT_DIR** que es una variable de entorno el cual mapea la ubicacion del proyecto en su maquina local para que no haya ningun inconveniente a la hora de probar en la Suite de Pentaho.
+* Es importante que usted **especifique la ruta raiz del proyecto para poder utilizar PROJECT_DIR** que es una variable de entorno el cual mapea la ubicacion del proyecto en su maquina local para que no haya ningun inconveniente a la hora de probar en la Suite de Pentaho.
+* Luego debe reemplazar este archivo, por el que se encuentra en el directorio *C:\Users\<user-name>\.kettle\kettle.properties*
 
-Luego debe reemplazar este archivo, por el que se encuentra en el directorio *C:\Users\<user-name>\.kettle\kettle.properties*
-
-[Como especificar el PROJECT_DIR](https://github.com/user-attachments/assets/e0aea4e9-fe49-49e7-808d-0134dc6d5565)
-
-[Como reemplazar la kettle.properties](https://github.com/user-attachments/assets/4c1f9f10-43f9-466f-a59c-017e0e3c6ddf)
-
+https://github.com/user-attachments/assets/da90538f-5d00-4487-8f3e-3ac0ca6efcb4
 
 # COMO PROBAR EL DESAFIO
 Todas las tareas que presenta el desafio estan resueltas y se pueden verificar en el directorio [**/outputs**](/outputs), pero para que los resultados esperados se muestren, usted debe ejecutar los **JOBS** correspondientes que se encuentran en [**/jobs**](/jobs).

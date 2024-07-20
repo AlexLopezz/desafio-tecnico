@@ -1,10 +1,8 @@
 # DESAFIO-TECNICO
-
-## Descripcion
 Este repositorio contiene todo lo necesario para resolver el desafio tecnico brindado por el NBCH.
 
 
-### Se divide en cuatro directorios:
+### Se divide en cuatro directorios fundamentales:
 * [inputs](/inputs/): Se encuentra todos los archivos helpers o de ayuda para el desarrollo del desafio. EJ: *Feriados.xls*
 * [outputs](/outputs/): Se encuentran aquellos archivos que se pretende por parte del desafio. EJ: *reporte.xlsx*
 * [jobs](/jobs/): Se encuentran todos los trabajos realizados para el cumplimiento de las consignas presentadas en el desafio.
@@ -58,13 +56,8 @@ Estos son los JOBS que resuelven las siguientes tareas:
 
 * [Carga de datos a csv y txt](/jobs/JOB_Carga%20de%20datos%20a%20.csv%20y%20.txt.kjb)
 
-
 https://github.com/user-attachments/assets/9fc59bba-b0d7-4493-9829-a1cfb5d5fb54
 
-
-
-
-
-
-
-
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/c99dd153-29c4-4b52-acc2-03bcb4551414" alt="logo_nbch">
+</div>

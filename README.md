@@ -1,57 +1,69 @@
-# desafio-tecnico
-    Aqui estara todo lo relacionado a lo realizado para el desarrollo del desafio.
+# DESAFIO-TECNICO
 
-El proyecto se divide en cuatro directorios:
-    * inputs: Aqui ira todos los inputs o archivos helpers para el desarrollo del desafio.
-    * outputs: Se encuentran aquellos archivos que se pretende por parte del desafio.
-    * jobs: Se encuentran todos los trabajos realizados para el cumplimiento de las consignas presentadas en el desafio.
-    * transformations: Se encuentran todas las transformaciones de datos que se realizaron para  el desafio.
+## Descripcion
+Este repositorio contiene todo lo necesario para resolver el desafio tecnico brindado por el NBCH.
+
+
+### Se divide en cuatro directorios:
+* [inputs](/inputs/): Se encuentra todos los archivos helpers o de ayuda para el desarrollo del desafio. EJ: *Feriados.xls*
+* [outputs](/outputs/): Se encuentran aquellos archivos que se pretende por parte del desafio. EJ: *reporte.xlsx*
+* [jobs](/jobs/): Se encuentran todos los trabajos realizados para el cumplimiento de las consignas presentadas en el desafio.
+* [transformations](/transformations/): Se encuentran todas las transformaciones de datos que se realizaron y que son utilizados en los jobs para  el desafio.
+
 
 
 # IMPORTANTE: BASE DE DATOS.
-    Como se especifica en la consigna: "...y persistirla en una base de datos (Tecnología y estructura de tabla a libre elección)."
+Como se especifica en la consigna: *"...y persistirla en una base de datos (Tecnología y estructura de tabla a libre elección)."*
 
-    Decidi utilizar Docker, para montar un contenedor MySQL y asi poder realizar el trabajo mas facil y rapido.
+Decidi utilizar Docker para correr un [contenedor MySQL](https://hub.docker.com/_/mysql) y asi poder realizar el trabajo mas facil y rapido, a continuacion dejare una pequeña guia para hacerlo funcionar en su maquina local:
 
-    Debe instalar Docker en su ordenador. Link hacia su pagina web aqui: https://docs.docker.com/get-docker/
+* Instale Docker.
+    * Windows: [https://docs.docker.com/get-docker/](https://docs.docker.com/desktop/install/windows-install/)
+    * Linux: https://docs.docker.com/engine/install/
+  
+* Abre una consola en su Sistema Operativo (CMD, bash, etc...) y ejecute los siguientes comandos: 
 
-    Una vez instalado, abra una consola en su Sistema Operativo (CMD, bash, etc...) y escriba los siguientes comandos: 
-    $ docker pull mysql
-    $ docker run -d --name mysql-docker -e MYSQL_DATABASE=db-desafio -e MYSQL_ROOT_PASSWORD=desafio -p 3306:3306 mysql
+```
+$ docker pull mysql
+$ docker run -d --name mysql-docker -e MYSQL_DATABASE=db-desafio -e MYSQL_ROOT_PASSWORD=desafio -p 3306:3306 mysql
+```
 
-    y listo! Puede probar la base de datos a traves de cualquier herramienta de administracion de base de datos como Dbeaver, PhpMyAdmin o el que soporte MySQL.
+Listo! Ahora puede probar conectar la base de datos MySQL a traves de cualquier herramienta de administracion de base de datos como [Dbeaver](https://dbeaver.io/), [phpMyAdmin](https://www.phpmyadmin.net/) o cualquiera que soporte MySQL. Tambien puede utilizarlo mediante [CLI](https://dev.mysql.com/doc/refman/8.4/en/mysql.html).
 
 
 # CREDENCIALES y RUTAS DEL PROYECTO:
-    Toda la informacion acerca de Credenciales y rutas del proyecto se encuentra en el archivo kettle.properties. Es importante que usted especifique la ruta raiz del proyecto para poder utilizar PROJECT_DIR de manera correcta y que no haya ningun inconveniente a la hora de probar en la Suite de Pentaho.
+Toda la informacion acerca de Credenciales para conectarse a la base de datos y rutas del proyecto se encuentra en el archivo [**kettle.properties**](/kettle.properties). 
 
-    Aqui una demostracion de lo que explico: 
-https://github.com/user-attachments/assets/92bfaa82-d399-452d-ae7e-ae78f0ff849b
+Es importante que usted especifique la ruta raiz del proyecto para poder utilizar **PROJECT_DIR** que es una variable de entorno el cual mapea la ubicacion del proyecto en su maquina local para que no haya ningun inconveniente a la hora de probar en la Suite de Pentaho.
 
-# COMO PROBAR EL DESAFIO?
-        Todas las tareas que presenta el desafio estan resueltas y se pueden verificar en el directorio /outputs, pero para que 
-    los resultados esperados se muestren, usted debe ejecutar los JOBS correspondientes que se encuentran en /jobs.
+Luego debe reemplazar este archivo, por el que se encuentra en el directorio *C:\Users\<user-name>\.kettle\kettle.properties*
 
-    Estos son los JOBS que resuelven las siguientes tareas:
-        2.  Obtener la información de la planilla “Feriado Local” y persistirla en una base de datos (Tecnología y estructura de tabla a libre elección). Por cada fila leída deben aplicarse las validaciones incluyentes (indicadas más adelante), y cargar en la tabla las filas que superen todas las validaciones.
+[Como especificar el PROJECT_DIR](https://github.com/user-attachments/assets/e0aea4e9-fe49-49e7-808d-0134dc6d5565)
+
+[Como reemplazar la kettle.properties](https://github.com/user-attachments/assets/4c1f9f10-43f9-466f-a59c-017e0e3c6ddf)
+
+
+# COMO PROBAR EL DESAFIO
+Todas las tareas que presenta el desafio estan resueltas y se pueden verificar en el directorio [**/outputs**](/outputs), pero para que los resultados esperados se muestren, usted debe ejecutar los **JOBS** correspondientes que se encuentran en [**/jobs**](/jobs).
+
+Estos son los JOBS que resuelven las siguientes tareas:
+
+*2.  Obtener la información de la planilla “Feriado Local” y persistirla en una base de datos (Tecnología y estructura de tabla a libre elección). Por cada fila leída deben aplicarse las validaciones incluyentes (indicadas más adelante), y cargar en la tabla las filas que superen todas las validaciones.*
         
-        * JOB: JOB_Carga de datos a Base de Datos.kjb 
+* [Carga de datos a Base de Datos](/jobs/JOB_Carga%20de%20datos%20a%20Base%20de%20Datos.kjb)
 
-        3.	Generar como salida, un archivo Excel denominado “reporte.xlsx” con los mismos datos y formato que el original, pero agregando una columna que contenga el resultado de la carga de cada feriado. Indicando si la misma fue cargada con éxito o fue rechazada por no superar las validaciones (especificando cual o cuales en cada caso). 
+*3.	Generar como salida, un archivo Excel denominado “reporte.xlsx” con los mismos datos y formato que el original, pero agregando una columna que contenga el resultado de la carga de cada feriado. Indicando si la misma fue cargada con éxito o fue rechazada por no superar las validaciones (especificando cual o cuales en cada caso).* 
 
-        * JOB: JOB_Excel con Resultado de Validaciones.kjb
+* [Excel con Resultado de Validaciones](/jobs/JOB_Excel%20con%20Resultado%20de%20Validaciones.kjb)
 
-        4.	Generar otro archivo de salida en formato CSV (Utilizando codificación UTF-8) llamada “total_provincias.csv” que contenga la sumatoria de feriados cargados para cada provincia. Ordenado de mayor a menor por la cantidad de feriados.
+*4.	Generar otro archivo de salida en formato CSV (Utilizando codificación UTF-8) llamada “total_provincias.csv” que contenga la sumatoria de feriados cargados para cada provincia. Ordenado de mayor a menor por la cantidad de feriados.*
 
-        5.	Generar un tercer archivo de salida (con extensión *.txt, con registro del tipo FIXED y codificación ANSI) denominado “total_localidad.txt” que contenga la sumatoria de los feriados cargados por localidad. Ordenado por Provincia y Localidad
+*5.	Generar un tercer archivo de salida (con extensión *.txt, con registro del tipo FIXED y codificación ANSI) denominado “total_localidad.txt” que contenga la sumatoria de los feriados cargados por localidad. Ordenado por Provincia y Localidad*
 
-        * JOB: JOB_Carga de datos a .csv y .txt.kjb
-
-Breve demostracion de como abrir y ejecutar el JOB: 
-
-https://github.com/user-attachments/assets/ae5ba158-ebc2-4242-b316-26843111b0c4
+* [Carga de datos a csv y txt](/jobs/JOB_Carga%20de%20datos%20a%20.csv%20y%20.txt.kjb)
 
 
+https://github.com/user-attachments/assets/9fc59bba-b0d7-4493-9829-a1cfb5d5fb54
 
 
 

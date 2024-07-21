@@ -436,13 +436,13 @@
   <notepads>
   </notepads>
   <connection>
-    <name>mysql</name>
+    <name>MySQL</name>
     <server>${DATABASE_HOST}</server>
     <type>MYSQL</type>
     <access>Native</access>
     <database>${DATABASE_NAME}</database>
     <port>${DATABASE_PORT}</port>
-    <username>${DATABASE_USER} </username>
+    <username>${DATABASE_USER}</username>
     <password>${DATABASE_PASSWORD}</password>
     <servername/>
     <data_tablespace/>
@@ -511,7 +511,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>mysql</connection>
+    <connection>MySQL</connection>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>JOB</name>
+  <name>JOB_Excel con Resultado de Validaciones</name>
   <description/>
   <extended_description/>
   <job_version/>
@@ -305,12 +305,12 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>176</xloc>
+      <xloc>48</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validacion en Localidades</name>
+      <name>Validacion en Localidades</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -349,7 +349,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validaciones en Fechas</name>
+      <name>Validaciones en Fechas</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -439,7 +439,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validacion en Codigo Postal</name>
+      <name>Validacion en Codigo Postal</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -478,7 +478,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_Validacion en P.I</name>
+      <name>Validacion en P.I</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -517,7 +517,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>ETL_OrdenDeCamposReporte</name>
+      <name>Orden de campos</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -588,15 +588,15 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>352</xloc>
+      <xloc>288</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
-      <from>ETL_Validaciones en Fechas</from>
-      <to>ETL_Validacion en Localidades</to>
+      <from>Validaciones en Fechas</from>
+      <to>Validacion en Localidades</to>
       <from_nr>1</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -604,7 +604,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_Validacion en Localidades</from>
+      <from>Validacion en Localidades</from>
       <to>ETL_Validacion en Provincias</to>
       <from_nr>0</from_nr>
       <to_nr>2</to_nr>
@@ -614,7 +614,7 @@
     </hop>
     <hop>
       <from>ETL_Validacion en Provincias</from>
-      <to>ETL_Validacion en Codigo Postal</to>
+      <to>Validacion en Codigo Postal</to>
       <from_nr>2</from_nr>
       <to_nr>1</to_nr>
       <enabled>Y</enabled>
@@ -622,8 +622,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_Validacion en Codigo Postal</from>
-      <to>ETL_Validacion en P.I</to>
+      <from>Validacion en Codigo Postal</from>
+      <to>Validacion en P.I</to>
       <from_nr>1</from_nr>
       <to_nr>1</to_nr>
       <enabled>Y</enabled>
@@ -631,8 +631,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_Validacion en P.I</from>
-      <to>ETL_OrdenDeCamposReporte</to>
+      <from>Validacion en P.I</from>
+      <to>Orden de campos</to>
       <from_nr>1</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -640,7 +640,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ETL_OrdenDeCamposReporte</from>
+      <from>Orden de campos</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -659,7 +659,7 @@
     </hop>
     <hop>
       <from>Creacion de Excel</from>
-      <to>ETL_Validaciones en Fechas</to>
+      <to>Validaciones en Fechas</to>
       <from_nr>0</from_nr>
       <to_nr>1</to_nr>
       <enabled>Y</enabled>

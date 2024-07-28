@@ -562,7 +562,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>C:\Users\Alex\Desktop\JOB_Creacion de Excel Reporte.kjb</filename>
+      <filename>${PROJECT_JOBS}\JOB_Creacion de Excel Reporte.kjb</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>

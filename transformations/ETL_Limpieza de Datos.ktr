@@ -442,11 +442,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Feriados Excel</from>
-      <to>Validaciones</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Validaciones</from>
       <to>Errores de validacion</to>
       <enabled>Y</enabled>
@@ -464,6 +459,26 @@
     <hop>
       <from>Casteo de valores</from>
       <to>Excel con Data Limpia</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Feriados Excel</from>
+      <to>Eliminacion de espacios Localidad y Provincia</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Eliminacion de espacios Localidad y Provincia</from>
+      <to>Eliminacion de espacios entre palabras de Provincia</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Eliminacion de espacios entre palabras de Provincia</from>
+      <to>Renombrar campo Provincia</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renombrar campo Provincia</from>
+      <to>Validaciones</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -575,7 +590,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>960</xloc>
+      <xloc>1600</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -611,7 +626,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>1440</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -636,7 +651,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>1296</xloc>
       <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
@@ -701,7 +716,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
+      <xloc>1904</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -836,7 +851,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
+      <xloc>48</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -913,7 +928,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
+      <xloc>1136</xloc>
       <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1081,7 +1096,152 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>1296</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Eliminacion de espacios entre palabras de Provincia</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var trimProvincia = Provincia.replace(/\s+/g,' ');</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>trimProvincia</name>
+        <rename>trimProvincia</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Eliminacion de espacios Localidad y Provincia</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Localidad</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>N</init_cap>
+        <mask_xml>None</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Provincia</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>N</init_cap>
+        <mask_xml>None</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Renombrar campo Provincia</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>Provincia</name>
+      </remove>
+      <meta>
+        <name>trimProvincia</name>
+        <rename>Provincia</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>

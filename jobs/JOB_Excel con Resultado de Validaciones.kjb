@@ -305,7 +305,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>48</xloc>
+      <xloc>160</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -344,7 +344,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>720</xloc>
+      <xloc>832</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -383,7 +383,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>1</nr>
-      <xloc>512</xloc>
+      <xloc>624</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -395,7 +395,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1744</xloc>
+      <xloc>1856</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -434,7 +434,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>2</nr>
-      <xloc>928</xloc>
+      <xloc>1040</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -473,7 +473,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>1</nr>
-      <xloc>1152</xloc>
+      <xloc>1264</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -512,7 +512,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>1</nr>
-      <xloc>1360</xloc>
+      <xloc>1472</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -551,7 +551,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1568</xloc>
+      <xloc>1680</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -588,7 +588,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
+      <xloc>400</xloc>
       <yloc>304</yloc>
       <attributes_kjc/>
     </entry>
@@ -669,10 +669,10 @@
   </hops>
   <notepads>
     <notepad>
-      <note>OK, PERO NO RESPETA LOS ESTILOS DE LAS COLUMNAS, NI EL TEXTO "FERIADOS LOCALES:"</note>
-      <xloc>512</xloc>
-      <yloc>176</yloc>
-      <width>620</width>
+      <note>OK, PERO ARCHIVO DE SALIDA NO RESPETA LOS ESTILOS DE LAS COLUMNAS, NI EL TEXTO "FERIADOS LOCALES:"</note>
+      <xloc>592</xloc>
+      <yloc>192</yloc>
+      <width>764</width>
       <heigth>30</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>

@@ -434,13 +434,30 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>Contempla la eliminacion de espacios al inicio y final de cada localidad
+</note>
+      <xloc>512</xloc>
+      <yloc>32</yloc>
+      <width>485</width>
+      <heigth>50</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
-    <hop>
-      <from>Reporte</from>
-      <to>Validacion</to>
-      <enabled>Y</enabled>
-    </hop>
     <hop>
       <from>Validacion</from>
       <to>Notificar error en Resultados</to>
@@ -454,6 +471,16 @@
     <hop>
       <from>Notificar error en Resultados</from>
       <to>Actualizar reporte</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Eliminacion de espacios</from>
+      <to>Validacion</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Reporte</from>
+      <to>Eliminacion de espacios</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -590,7 +617,47 @@
     </remotesteps>
     <GUI>
       <xloc>1056</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Eliminacion de espacios</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Localidad</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper/>
+        <padding_type/>
+        <pad_char/>
+        <pad_len/>
+        <init_cap/>
+        <mask_xml/>
+        <digits/>
+        <remove_special_characters/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -629,7 +696,7 @@
     </remotesteps>
     <GUI>
       <xloc>736</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -775,8 +842,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>160</yloc>
+      <xloc>224</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -832,7 +899,7 @@
     </remotesteps>
     <GUI>
       <xloc>736</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

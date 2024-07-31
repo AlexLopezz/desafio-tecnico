@@ -434,6 +434,27 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>Correcion de longitud maxima codigo postal</note>
+      <xloc>304</xloc>
+      <yloc>80</yloc>
+      <width>308</width>
+      <heigth>30</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
     <hop>
@@ -442,13 +463,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Replace in string</from>
+      <from>Eliminacion de .0</from>
       <to>Validacion</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Reporte</from>
-      <to>Replace in string</to>
+      <to>Eliminacion de .0</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -600,6 +621,45 @@
     </GUI>
   </step>
   <step>
+    <name>Eliminacion de .0</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Cód. Postal</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>\.\d*0</replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Notificar error en Resultados</name>
     <type>ReplaceString</type>
     <description/>
@@ -635,45 +695,6 @@
     <GUI>
       <xloc>608</xloc>
       <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>Cód. Postal</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>\.\d*0</replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -841,7 +862,7 @@
     <validator_field>
       <name>Cód. Postal</name>
       <validation_name>Codigo Postal</validation_name>
-      <max_length>5</max_length>
+      <max_length>15</max_length>
       <min_length>1</min_length>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>

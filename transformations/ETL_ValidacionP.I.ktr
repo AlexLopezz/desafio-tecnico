@@ -442,13 +442,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Replace in string</from>
+      <from>Eliminacion de .0</from>
       <to>Validacion</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Reporte</from>
-      <to>Replace in string</to>
+      <to>Eliminacion de .0</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -639,7 +639,7 @@
     </GUI>
   </step>
   <step>
-    <name>Replace in string</name>
+    <name>Eliminacion de .0</name>
     <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
@@ -672,7 +672,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>560</xloc>
       <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
